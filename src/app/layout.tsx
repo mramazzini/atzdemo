@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import ThemeController from "./components/Theme/ThemeController";
+import Navbar from "./components/Navbar/Navbar";
+import { NAVBAR_REM_HEIGHT } from "@/lib/global";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +19,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body
+        className={`${inter.className} w-screen flex flex-col items-center justify-center bg-base-100`}
+      >
+        <main className="w-full max-w-[1800px] bg-base-200">
+          <Navbar />
+          <div
+            className="flex flex-col items-center justify-center p-8 md:p-16 "
+            style={{
+              minHeight: `calc(100vh - ${NAVBAR_REM_HEIGHT}rem)`,
+            }}
+          >
+            {children}
+          </div>
+        </main>
+      </body>
     </html>
   );
 }
