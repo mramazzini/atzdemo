@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.hero-img {
+  /* filter with color #F3EDE3 */
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.hero-gradient {
+  background: linear-gradient(90deg, #003366 0%, #007bff 100%);
+}
