@@ -4,40 +4,35 @@ import Link from "next/link";
 
 const Hero = () => {
   return (
-    <div
-      style={{
-        height: `calc(70vh - ${NAVBAR_REM_HEIGHT}rem)`,
-        maxHeight: "900px",
-      }}
-      className="flex flex-row justify-center items-center bg-base-300 rounded-3xl hero-gradient relative"
-    >
-      <div className="w-full relative h-full flex items-center flex-row p-8">
-        <Image
-          src="/woman.png"
-          alt="woman"
-          width={1280}
-          height={1252}
-          className="w-1/2 absolute right-0 bottom-0"
-        />
-        <div className="flex flex-col justify-start text-left text-primary-content w-1/2 h-full">
-          <div className="mb-auto" />
+    <div className="flex flex-row justify-center items-center bg-base-300 rounded-3xl hero-gradient h-[70vh] max-h-[900px]">
+      <div className="w-full relative h-full flex items-center flex-row">
+        <div className="flex flex-col justify-start text-left text-primary-content w-full xl:w-1/2 h-full p-8">
+          <div className="mb-auto">
+            {/* phone and address */}
+            <p className="font-bold">Andrea Joseph</p>
+            <p className="font-bold ">832-324-9903</p>
+            <p className=" font-bold">1220 Augusta Rd. Suite 300</p>
+          </div>
 
-          <h1 className="text-8xl">A to Z </h1>
-          <h2 className="text-3xl font-bold">
-            Your Houston Real Estate Experts
+          <h1 className="text-6xl md:text-8xl text-center md:text-left">
+            A to Z{" "}
+          </h1>
+          <h2 className="text-xl font-bold text-center md:text-left">
+            Houston's Real Estate Expert
           </h2>
           <div className="mt-4">
-            <Link href="/about" className="btn btn-lg  mr-4">
+            <Link href="/about" className="btn btn-sm md:btn-lg  mr-4 my-2">
               Learn More -&gt;
             </Link>
             <Link
               href="/contact"
-              className="btn btn-lg border btn-ghost border-white"
+              className="btn btn-sm md:btn-lg border btn-ghost border-white my-2"
             >
               Get A Quote -&gt;
             </Link>
           </div>
-          <div className="mt-auto flex justify-start flex-row items-start">
+          <div className="mt-auto flex justify-start md:hidden"></div>
+          <div className="mt-auto flex justify-start hidden md:flex flex-col md:flex-row items-start">
             <Link href="/contact" className="font-bold btn btn-ghost">
               Contact Us -&gt;
             </Link>
@@ -49,6 +44,13 @@ const Hero = () => {
             </Link>
           </div>
         </div>
+        <Image
+          src="/woman.png"
+          alt="woman"
+          width={1280}
+          height={1252}
+          className="w-1/2 relative right-0 bottom-0 overflow-hidden h-full object-cover object-top "
+        />
       </div>
     </div>
   );

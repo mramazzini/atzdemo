@@ -1,4 +1,4 @@
-import { Property } from "./types";
+import { BlogPost, Property } from "./types";
 
 export const NAVBAR_REM_HEIGHT = 4;
 export const EXAMPLE_PROPERTIES: Property[] = [
@@ -17,6 +17,7 @@ export const EXAMPLE_PROPERTIES: Property[] = [
       state: "TX",
       zip: "77002",
     },
+    description: "This is a beautiful house with a large garden.",
     tags: ["garage", "garden"],
     featured: true,
     new: true,
@@ -30,6 +31,8 @@ export const EXAMPLE_PROPERTIES: Property[] = [
     baths: 3,
     sqft: 3000,
     type: "house",
+    description:
+      "Featuring a pool and fireplace, this house is perfect for entertaining.",
     address: {
       street: "1234 Elm St",
       city: "Houston",
@@ -56,6 +59,7 @@ export const EXAMPLE_PROPERTIES: Property[] = [
       state: "TX",
       zip: "77002",
     },
+    description: "Located in a great neighborhood, perfect for a small family.",
     featured: true,
     tags: ["pool", "garden"],
   },
@@ -76,4 +80,28 @@ export const EXAMPLE_PROPERTIES: Property[] = [
   //     },
   //     tags: [],
   //   },
+];
+
+export const EXAMPLE_BLOG_POSTS: BlogPost[] = [
+  {
+    id: "1",
+    title: "How to Buy a Home",
+    date: "2021-09-01",
+    flavorText: "Learn how to buy a home in 5 easy steps.",
+    image: "/blog1.jpg",
+  },
+  {
+    id: "2",
+    title: "How to Sell a Home",
+    date: "2021-09-15",
+    flavorText: "Learn how to sell a home in 5 easy steps.",
+    image: "/blog2.jpg",
+  },
+  {
+    id: "3",
+    title: "The Best Neighborhoods in Houston",
+    date: "2021-10-01",
+    flavorText: "Discover the best neighborhoods in Houston.",
+    image: "/blog3.jpg",
+  },
 ];

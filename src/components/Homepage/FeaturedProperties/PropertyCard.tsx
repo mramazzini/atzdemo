@@ -6,7 +6,7 @@ interface Props {
 }
 const PropertyCard = ({ property }: Props) => {
   return (
-    <div className="card bg-base-100 w-96 shadow-xl">
+    <div className="card bg-base-100 w-96 shadow-xl cursor-pointer">
       <figure>
         <Image
           src={property.image}
@@ -23,7 +23,7 @@ const PropertyCard = ({ property }: Props) => {
             <div className="badge badge-accent">HOT 🔥</div>
           )}
         </h2>
-        <p>If a dog chews shoes whose shoes does he choose?</p>
+        <p>{property.description}</p>
         <div className="card-actions justify-end">
           {property.tags?.map((tag) => (
             <div key={tag} className="badge badge-outline">

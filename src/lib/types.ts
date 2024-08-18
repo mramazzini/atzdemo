@@ -12,6 +12,7 @@ export interface Property {
   featured?: boolean;
   new?: boolean;
   inDemand?: boolean;
+  description: string;
 }
 
 export type Tag = "pool" | "fireplace" | "garage" | "garden";
@@ -21,4 +22,12 @@ export interface Address {
   city: string;
   state: string;
   zip: string;
+}
+
+export interface BlogPost {
+  id: string;
+  title: string;
+  date: string;
+  flavorText: string;
+  image: string;
 }
